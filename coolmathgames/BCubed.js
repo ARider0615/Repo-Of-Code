@@ -1,6 +1,8 @@
-let keypressDelay = 150;
-let goldBlockDelay = 500;
-let cyanBlockDelay = 800;
+let additionalDelay = 200;
+
+let keypressDelay = 150 + additionalDelay;
+let goldBlockDelay = 500 + additionalDelay;
+let cyanBlockDelay = 800 + additionalDelay;
 
 function getBCubed() {
     try {
