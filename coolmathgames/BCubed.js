@@ -3,7 +3,6 @@ A solver for the game b-cubed (https://www.coolmathgames.com/0-b-cubed)
 Note: Level 20 is not completely finished, therefore it does not get past it.
 */
 
-
 let additionalDelay = 200;
 
 let keypressDelay = 150 + additionalDelay;
@@ -660,7 +659,7 @@ async function start() {
     }
 }
 
-// start();
+/* start(); */
 
 function parseKeys(log) {
     let replace1 = /([A-Z])\w+:\w*/g;
