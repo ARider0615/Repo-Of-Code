@@ -1,25 +1,9 @@
-let additionalDelay = 200;
+let additionalDelay = 400;
 
 let keypressDelay = 150 + additionalDelay;
 let goldBlockDelay = 500 + additionalDelay;
 let cyanBlockDelay = 800 + additionalDelay;
 let levelDelay = 2500;
-
-const LEVELS = [
-    "await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);",
-    "await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);",
-    "await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressLeft(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressUp(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);",
-    "await pressUp(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);",
-    "await pressUp(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressUp(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressRight(keypressDelay);",
-    "await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);",
-    "await pressUp(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressUp(keypressDelay);",
-    "await pressDown(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);",
-    "await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressLeft(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);",
-    "await pressUp(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await sleep(goldBlockDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressUp(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressUp(keypressDelay);",
-    "await pressUp(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressUp(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressUp(keypressDelay);await pressLeft(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);",
-    "await pressUp(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressRight(keypressDelay);await pressUp(keypressDelay);await pressLeft(keypressDelay);await pressLeft(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressUp(keypressDelay);await pressRight(keypressDelay);await pressDown(keypressDelay);await pressDown(keypressDelay);",
-    "",
-];
 
 const utils = {
     get gameWindow() {
@@ -35,43 +19,78 @@ function sleep(ms) {
 }
 
 function pressArrowKey(name) {
-    return utils.BCubed.keyboard.keys[`onArrow${name}`](name);
-}
-
-function pressRight(delay) {
-    return new Promise(async (resolve, reject) => {
-        await sleep(delay);
-        pressArrowKey("Right");
+    return new Promise(async (resolve) => {
+        await sleep(keypressDelay);
+        utils.BCubed.keyboard.keys[`onArrow${name}`](name);
+        resolve();
     });
 }
 
-function pressLeft(delay) {
-    return new Promise(async (resolve, reject) => {
-        await sleep(delay);
-        pressArrowKey("Left");
+function pressRight() {
+    return new Promise(async (resolve) => {
+        await pressArrowKey("Right");
+        resolve();
     });
 }
 
-function pressUp(delay) {
-    return new Promise(async (resolve, reject) => {
-        await sleep(delay);
-        pressArrowKey("Up");
+function pressLeft() {
+    return new Promise(async (resolve) => {
+        await pressArrowKey("Left");
+        resolve();
     });
 }
 
-function pressDown(delay) {
-    return new Promise(async (resolve, reject) => {
-        await sleep(delay);
-        pressArrowKey("Down");
+function pressUp() {
+    return new Promise(async (resolve) => {
+        await pressArrowKey("Up");
+        resolve();
     });
 }
 
-function start() {
-    LEVELS.forEach(async (level) => {
-        // new AsyncFunction()
-        // let res = eval(level);
-        // alert(res);
+function pressDown() {
+    return new Promise(async (resolve) => {
+        await pressArrowKey("Down");
+        resolve();
     });
+}
+
+function nextLevel() {
+    return new Promise(async (resolve) => {
+        await sleep(levelDelay);
+        utils.BCubed.keyboard.keys.onSpacebar();
+        resolve();
+    });
+}
+
+const LEVELS = [
+    "await pressRight();await pressRight();await pressRight();await pressRight();await pressRight();await pressRight();await pressRight();",
+    "await pressLeft();await pressLeft();await pressDown();await pressDown();await pressRight();await pressRight();await pressUp();await pressRight();await pressRight();await pressDown();await pressDown();await pressLeft();await pressLeft();await pressLeft();await pressLeft();await pressDown();await pressDown();await pressRight();await pressRight();await pressUp();",
+    "await pressRight();await pressRight();await pressRight();await pressRight();await pressUp();await pressLeft();await pressUp();await pressRight();await pressRight();await pressUp();await pressUp();await pressLeft();await pressDown();await pressLeft();await pressUp();await pressLeft();await pressLeft();await pressDown();await pressLeft();await pressDown();await pressRight();await pressRight();await pressUp();",
+    "await pressUp();await pressLeft();await pressLeft();await pressDown();await pressLeft();await pressUp();await pressUp();await pressRight();await pressRight();await pressRight();await pressRight();await pressRight();await pressRight();await pressRight();await pressRight();await pressDown();await pressLeft();await pressDown();await pressDown();await pressLeft();await pressLeft();await pressUp();await pressRight();await pressUp();",
+    "await pressUp();await pressRight();await pressUp();await pressRight();await pressUp();await pressRight();await pressUp();await pressRight();await pressUp();await pressRight();await pressDown();await pressDown();await pressLeft();await pressDown();await pressRight();await pressDown();await pressDown();await pressLeft();await pressUp();await pressLeft();await pressLeft();await pressDown();await pressRight();",
+    "await pressLeft();await pressDown();await pressDown();await pressRight();await pressRight();await pressRight();await pressUp();await pressUp();await pressUp();await pressUp();await pressRight();await pressRight();await pressDown();await pressDown();await pressLeft();await pressLeft();await pressLeft();",
+    "await pressUp();await pressLeft();await pressLeft();await pressDown();await pressRight();await pressDown();await pressDown();await pressDown();await pressRight();await pressRight();await pressUp();await pressRight();await pressDown();await pressRight();await pressRight();await pressUp();await pressUp();await pressUp();await pressLeft();await pressLeft();await pressLeft();await pressUp();await pressRight();await pressRight();await pressRight();await pressRight();await pressRight();await pressDown();await pressDown();await pressLeft();await pressUp();",
+    "await pressDown();await pressDown();await pressDown();await pressDown();await pressDown();await pressRight();await pressRight();await pressRight();await pressUp();await pressLeft();await pressLeft();await pressUp();await pressRight();await pressRight();await pressUp();await pressLeft();await pressLeft();await pressUp();await pressUp();await pressRight();await pressDown();await pressRight();await pressUp();await pressRight();await pressDown();await pressDown();await pressRight();await pressRight();await pressUp();await pressUp();await pressLeft();await pressDown();",
+    "await pressLeft();await pressLeft();await pressLeft();await pressDown();await pressDown();await pressRight();await pressRight();await pressUp();await pressRight();await pressDown();await pressDown();await pressDown();await pressRight();await pressRight();await pressUp();await pressUp();await pressUp();await pressLeft();await pressUp();await pressRight();await pressRight();await pressRight();await pressDown();await pressDown();await pressDown();await pressLeft();await pressDown();await pressRight();await pressDown();await pressLeft();await pressLeft();await pressLeft();await pressLeft();await pressLeft();await pressLeft();await pressUp();await pressUp();await pressLeft();await pressDown();await pressDown();await pressLeft();",
+    "await pressUp();await pressUp();await pressRight();await pressRight();await pressUp();await pressUp();await pressRight();await pressRight();await pressUp();await pressUp();await pressRight();await pressRight();await pressDown();await pressDown();await pressLeft();await pressLeft();await pressDown();await pressDown();await sleep(goldBlockDelay);await pressRight();await pressUp();await pressRight();await pressDown();await pressDown();await pressDown();await pressLeft();await pressUp();await pressLeft();await pressDown();await pressLeft();await pressUp();await pressUp();await pressLeft();await pressDown();await pressDown();await pressLeft();await pressUp();",
+    "await pressUp();await pressRight();await pressRight();await pressRight();await pressRight();await pressDown();await pressRight();await pressUp();await pressRight();await pressRight();await pressDown();await pressDown();await pressLeft();await pressUp();await pressLeft();await pressDown();await pressLeft();await pressLeft();await pressLeft();await pressUp();await pressLeft();await pressDown();await pressLeft();",
+    "await pressUp();await pressUp();await pressUp();await pressUp();await pressUp();await pressRight();await pressRight();await pressRight();await pressRight();await pressRight();await pressDown();await pressDown();await pressDown();await pressDown();await pressDown();await pressLeft();await pressLeft();await pressLeft();await pressLeft();await pressUp();await pressRight();await pressRight();await pressRight();await pressUp();await pressLeft();await pressLeft();await pressUp();await pressUp();await pressUp();await pressRight();await pressDown();await pressDown();",
+];
+
+async function start() {
+    try {
+        for (let i = 0; i < LEVELS.length; i++) {
+            let level = LEVELS[i];
+            console.log(`Level${i}`);
+            await new Function(
+                `return new Promise(async (resolve) => { ${level} resolve(); })`
+            )();
+            console.log("Pressing next...");
+            await nextLevel();
+        }
+    } catch (err) {
+        console.error(err);
+    }
 }
 
 if (!window.hasAddedKeyListener) {

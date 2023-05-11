@@ -13,16 +13,16 @@ levels.forEach((level) => {
         if (key.length !== 0) {
             switch (key) {
                 case "ArrowRight":
-                    code += "await pressRight(keypressDelay);";
+                    code += "await pressRight();";
                     break;
                 case "ArrowLeft":
-                    code += "await pressLeft(keypressDelay);";
+                    code += "await pressLeft();";
                     break;
                 case "ArrowUp":
-                    code += "await pressUp(keypressDelay);";
+                    code += "await pressUp();";
                     break;
                 case "ArrowDown":
-                    code += "await pressDown(keypressDelay);";
+                    code += "await pressDown();";
                     break;
                 case "Period":
                     code = "";
